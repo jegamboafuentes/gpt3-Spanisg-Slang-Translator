@@ -1,120 +1,41 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import buildspaceLogo from '../assets/buildspace-logo.png';
-import { useState } from 'react';
-import React from "react"
-import ReactCountryFlag from "react-country-flag"
-
+import metaverseProfessionalLogo from '../assets/metaverse_professional_logo.png';
 
 
 const Home = () => {
-  const [userInput, setUserInput] = useState('');
-  const [apiOutput, setApiOutput] = useState('');
-  const [isGenerating, setIsGenerating] = useState(false)
-
-  const callGenerateEndpoint = async () => {
-    setIsGenerating(true);
-
-    console.log("Calling OpenAI...")
-    const response = await fetch('/api/generate', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ userInput }),
-    });
-
-    const data = await response.json();
-    const { output } = data;
-    console.log("OpenAI replied...", output.text)
-
-    setApiOutput(`${output.text}`);
-    setIsGenerating(false);
-  }
-
-  const onUserChangedText = (event) => {
-    //console.log(event.target.value);
-    setUserInput(event.target.value);
-  };
   return (
     <div className="root">
       <Head>
-        <title>GPT-3 Writer | buildspace</title>
+        <title>Automatic NFT trait generator</title>
+        <script src="https://connect.manifoldxyz.dev/latest/connect.umd.js"></script>
+        <link rel="stylesheet" href="https://connect.manifoldxyz.dev/latest/connect.css"></link>
       </Head>
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>Traductor de frases en Español entre paises Hispanos</h1>
-          </div>
-          <div className="header-title">
-            <h2>Translator of phrases in Spanish between Hispanic countries</h2>
-          </div>
-          <div className="header-title">
-            <h2>
-              <ReactCountryFlag countryCode="ES" svg />
-              <ReactCountryFlag countryCode="MX" svg />
-              <ReactCountryFlag countryCode="AR" svg />
-              <ReactCountryFlag countryCode="CL" svg />
-              <ReactCountryFlag countryCode="PE" svg />
-              <ReactCountryFlag countryCode="BO" svg />
-              <ReactCountryFlag countryCode="EC" svg />
-              <ReactCountryFlag countryCode="VE" svg />
-              <ReactCountryFlag countryCode="CO" svg />
-            </h2>
+            <h1>Automatic NFT trait generator</h1>
           </div>
           <div className="header-subtitle">
-            <h2>Introduce una frase de algun pais que habla Español a otro pais que tambien habla Español</h2>
+            <h2>Instructions: Connect your wallet (⬇️) and select the asset that you want to get traits of</h2>
           </div>
-          <div className="header-subtitle">
-            <h3>Enter a phrase from a country that speaks Spanish to another country that also speaks Spanish</h3>
-          </div>
-          <div className="header-subtitle">
-            <h4>Ejemplo, Frase en Mexico: "Que tranza carnal"</h4>
-          </div>
+          
         </div>
-
-        <div className="prompt-container">
-          <textarea
-            placeholder="start typing here"
-            className="prompt-box"
-            value={userInput}
-            onChange={onUserChangedText}
-          />
-          <div className="prompt-buttons">
-            <a
-              className={isGenerating ? 'generate-button loading' : 'generate-button'}
-              onClick={callGenerateEndpoint}
-            >
-              <div className="generate">
-                {isGenerating ? <span className="loader"></span> : <p>Generate</p>}
-              </div>
-            </a>
-          </div>
-          {/* New code I added here */}
-          {apiOutput && (
-            <div className="output">
-              <div className="output-header-container">
-                <div className="output-header">
-                  <h3>Output</h3>
-                </div>
-              </div>
-              <div className="output-content">
-                <p>{apiOutput}</p>
-              </div>
-            </div>
-          )}
-        </div>
-
       </div>
       <div className="badge-container grow">
         <a
-          href="https://buildspace.so/builds/ai-writer"
+          href="https://metaverseprofessional.tech/"
           target="_blank"
           rel="noreferrer"
         >
           <div className="badge">
             <Image src={buildspaceLogo} alt="buildspace logo" />
-            <p>build with buildspace</p>
+            <p>Buildspace N&W2</p>
+          </div>
+          <div className="badge">
+            <Image src={metaverseProfessionalLogo} alt="buildspace logo" />
+            <p>Metaverse Professional</p>
           </div>
         </a>
       </div>
