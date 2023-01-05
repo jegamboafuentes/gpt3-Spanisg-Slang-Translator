@@ -3,7 +3,7 @@ import Image from 'next/image';
 import buildspaceLogo from '../assets/buildspace-logo.png';
 import { useState } from 'react';
 import React from "react"
-import ReactCountryFlag from "react-country-flag"
+import ReactCountryFlag from "../node_modules/react-country-flag"
 
 
 
