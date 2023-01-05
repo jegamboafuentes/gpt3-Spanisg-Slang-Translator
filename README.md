@@ -10,4 +10,4 @@ Introduce una frase de algun pais que habla Español a otro pais que tambien hab
 
 🦾_This application is powerd by GPT3_🦾 
 
-![Screenshot]([http://url/to/img.png](https://github.com/jegamboafuentes/gpt3-Spanisg-Slang-Translator/blob/main/assets/Screenshot_6.png))
+![AppScreenshot]([[http://url/to/img.png](https://github.com/jegamboafuentes/gpt3-Spanisg-Slang-Translator/blob/main/assets/Screenshot_6.png](https://github.com/jegamboafuentes/gpt3-Spanisg-Slang-Translator/blob/main/assets/Screenshot_6.png?raw=true)))
