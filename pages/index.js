@@ -2,8 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import buildspaceLogo from '../assets/buildspace-logo.png';
 import { useState } from 'react';
-import React from "react"
-import ReactCountryFlag from "../node_modules/react-country-flag"
+import React from "react";
 
 
 
@@ -48,19 +47,6 @@ const Home = () => {
           </div>
           <div className="header-title">
             <h2>Translator of phrases in Spanish between Hispanic countries</h2>
-          </div>
-          <div className="header-title">
-            <h2>
-              <ReactCountryFlag countryCode="ES" svg />
-              <ReactCountryFlag countryCode="MX" svg />
-              <ReactCountryFlag countryCode="AR" svg />
-              <ReactCountryFlag countryCode="CL" svg />
-              <ReactCountryFlag countryCode="PE" svg />
-              <ReactCountryFlag countryCode="BO" svg />
-              <ReactCountryFlag countryCode="EC" svg />
-              <ReactCountryFlag countryCode="VE" svg />
-              <ReactCountryFlag countryCode="CO" svg />
-            </h2>
           </div>
           <div className="header-subtitle">
             <h2>Introduce una frase de algun pais que habla Español a otro pais que tambien habla Español</h2>
